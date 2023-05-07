@@ -17,8 +17,8 @@ function TEST_FILE() {
   const {describe, it} = require('node:test');
   const {deepStrictEqual} = require('assert');
 
-  describe('', function() {\n  it('should', function() {
-  deepStrictEqual();\n });\n  });
+  describe('', function() {\n   it('should', function() {
+  deepStrictEqual();\n   });\n  });
   "
 
   echo $TEXT
