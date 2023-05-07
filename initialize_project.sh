@@ -4,7 +4,7 @@ function MAIN() {
   TEXT="
   const {} = require("src/rename-it-later.js");
 
-  const main = function() {\\\\n}
+  const main = function() {"\n"}
 
   main();
   "
