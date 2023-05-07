@@ -1,5 +1,13 @@
 #! /bin/bash
 
+function KEBAB_TO_CAMEL_CASE() {
+  echo $(node -p "'$1'.replace(/-(.)/g, function(a, b){ return b.toUpperCase();})")
+}
+
+function SPLIT_WORDS_IN_KEBAB_CASE() {
+  echo $(node -p "'$1'.replace(/-/g, " ")")
+}
+
 function source_file() {
   NAME_IN_PASCAL_CASE=$(KEBAB_TO_CAMEL_CASE $1)
 
