@@ -1,13 +1,13 @@
 #! /bin/bash
 
 function MAIN() {
-  TEXT='
+  TEXT="
   const {} = require("src/rename-it-later.js");
 
   const main = function() {\\\n}
 
   main();
-  '
+  "
 
   echo $TEXT
 }
@@ -34,7 +34,7 @@ function INITIALIZE() {
   git add -A
   git commit -m "Initial commit"
 
-  vim TODO
+  # vim TODO
 
 }
 
