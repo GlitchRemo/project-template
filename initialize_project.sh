@@ -46,6 +46,14 @@ function TODO() {
   echo $TEXT
 }
 
+function GITIGNORE() {
+  TEXT="
+  .*sw.*
+  DS.*
+  "
+  echo $TEXT
+}
+
 function INITIALIZE() {
 
   mkdir src test
@@ -57,6 +65,8 @@ function INITIALIZE() {
   TEST_FILE > test/rename-it-later-test.js
 
   TODO > TODO
+
+  GITIGNORE > .gitignore
 
   git init
   git add -A
