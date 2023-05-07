@@ -27,9 +27,9 @@ function TEST_FILE() {
 function TODO() {
   TEXT="
   Checklist\n
-  ✔ Think through every layer of project\n
-  ✔ Search Theasaurus synonyms (should be domain specific)\n
-  ✔ git commit\n
+  ✔ Think through every layer of project
+  ✔ Search Theasaurus synonyms (should be domain specific)
+  ✔ git commit
   ✔ git push
   ----------------\n
   ✔ What is ...?
