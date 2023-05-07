@@ -2,9 +2,9 @@
 
 function MAIN() {
   TEXT="
-  const {} = require("src/rename-it-later.js");
+  const {} = require('src/rename-it-later.js');
 
-  const main = function() {\n }
+  const main = function() {\n  }
 
   main();
   "
@@ -12,11 +12,20 @@ function MAIN() {
   echo $TEXT
 }
 
-# function TEST_FILE() {
-# }
+function TEST_FILE() {
+  TEXT="
+  const {describe, it} = require('node:test');
+  const {deepStrictEqual} = require('assert');
 
-# function TODO() {
-# }
+  describe('', function() {\n  it('should', function() {
+  deepStrictEqual();\n });\n  });
+  "
+
+  echo $TEXT
+}
+
+function TODO() {
+}
 
 function INITIALIZE() {
 
