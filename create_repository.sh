@@ -5,7 +5,7 @@ function KEBAB_TO_CAMEL_CASE() {
 }
 
 function SPLIT_WORDS_IN_KEBAB_CASE() {
-  echo $(node -p "'$1'.replace(/-/g, " ")")
+  echo $(node -p "'$1'.replace(/-/g, ' ')")
 }
 
 function source_file() {
@@ -55,9 +55,6 @@ function create_Repo() {
   mkdir -p $PROJECT_NAME/src $PROJECT_NAME/test
   cd $PROJECT_NAME
 
-  # snake case to kebab case
-  NAME_IN_KEBAB_CASE=$(node -p "'$PROJECT_NAME'.replace(/-/g, '_')")
-
   # set up source file
   source_file $PROJECT_NAME > src/$PROJECT_NAME.js
 
@@ -67,9 +64,13 @@ function create_Repo() {
   # setting up .gitignore file to ignore .swp files
   gitignore > .gitignore
 
+  # create TODO file
+  touch TODO
+
   # git init
   git init
   git add .
+  git commit -m "Initial commit"
   git status
 
   # run a test
