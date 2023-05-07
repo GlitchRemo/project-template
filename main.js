@@ -1,7 +1,8 @@
 
-  const {} = require("src/rename-it-later.js");
+  const {} = require(src/rename-it-later.js);
 
-  const main = function() {n}
+  const main = function() {
+}
 
   main();
   
